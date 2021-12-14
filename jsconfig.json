@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"checkJs": true,
+		"module": "esnext",
+		"lib": ["ES2015", "DOM"],
+		"strict": true,
+		"target": "ES2018",
+		"moduleResolution": "node"
+	},
+	"include": ["src", "test", "example"]
+}
