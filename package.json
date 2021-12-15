@@ -1,6 +1,6 @@
 {
 	"name": "webpush-webcrypto",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "lib/webpush.js",
 	"license": "MIT",
 	"type": "module",
@@ -20,5 +20,9 @@
 	"repository": {
 		"url": "https://github.com/alastaircoote/webpush-webcrypto.git",
 		"type": "git"
-	}
+	},
+	"keywords": [
+		"webpush",
+		"webcrypto"
+	]
 }
