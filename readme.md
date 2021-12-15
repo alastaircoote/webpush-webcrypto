@@ -1,5 +1,9 @@
 # webpush-webcrypto
 
+A JS module for sending Web Push notifications, working in both browser and server environments. Try the live example page:
+
+https://alastaircoote.github.io/webpush-webcrypto/
+
 ## What is it?
 
 This is a JavaScript module for sending [Web Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) messsages to client browsers. It offers similar functionality to the [web-push](https://www.npmjs.com/package/web-push) Node module but with the following differences:
