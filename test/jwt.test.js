@@ -1,8 +1,13 @@
-import { createJWT } from "../src/jwt.js";
+import { createJWT } from "../lib/jwt.js";
 import crypto from "./stubs/webcrypto.js";
 import jwt from "jsonwebtoken";
+import { setWebCrypto } from "../lib/util.js";
 
 describe("JWT", function () {
+	before(() => {
+		setWebCrypto(crypto);
+	});
+
 	it("creates a valid JWT token", async function () {
 		const keyPair = await crypto.subtle.generateKey(
 			{

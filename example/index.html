@@ -1,0 +1,41 @@
+<!DOCTYPE >
+<html>
+	<head>
+		<title>Webpush self-push test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<style>
+		body {
+			font-family: system-ui, sans-serif;
+			max-width: 700px;
+			margin: 1em auto;
+		}
+
+		button {
+			display: block;
+			margin: 0 auto;
+			padding: 1em 2em;
+			font-size: 1em;
+			background: darkblue;
+			color: #fff;
+			border: none;
+		}
+
+		.error {
+			color: darkred;
+			font-weight: bold;
+		}
+	</style>
+	<h1>Send a web push to yourself</h1>
+	<p>
+		One of the easiest ways to test sending a web push in the browser is to just
+		go ahead and send one to yourself. Unfortunately not all browsers allow this
+		because their web push endpoints are not CORS enabled. So check and see if
+		your browser is:
+	</p>
+	<p>
+		<button disabled id="send">Send me a push</button>
+	</p>
+	<ol id="updates"></ol>
+	<script type="module" src="./client.js"></script>
+</html>
