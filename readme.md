@@ -1,12 +1,12 @@
 # webpush-webcrypto
 
-A JS module for sending Web Push notifications, working in both browser and server environments. Try the live example page:
+A JS module for sending [Web Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) notifications, working in both browser and server environments. Try the live example page:
 
 https://alastaircoote.github.io/webpush-webcrypto/
 
-## What is it?
+## Why?
 
-This is a JavaScript module for sending [Web Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) messsages to client browsers. It offers similar functionality to the [web-push](https://www.npmjs.com/package/web-push) Node module but with the following differences:
+This module offers similar functionality to the [web-push](https://www.npmjs.com/package/web-push) Node module but with the following differences:
 
 - It only has one dependency: the [WebCrypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API). This means it can run on more than just Node: most significantly it runs on [all major browsers](https://caniuse.com/cryptography), allowing you to send messages peer to peer (with [an important caveat](#the-big-caveat-with-peer-to-peer-pushes)). In theory it also runs in environments like [Deno](https://doc.deno.land/deno/stable/~/crypto) and [Cloudflare Workers](https://developers.cloudflare.com/workers/runtime-apis/web-crypto) but I haven't tried that yet.
 - It doesn't have any of the legacy support that web-push does, like sending GCM messages to Chrome.
