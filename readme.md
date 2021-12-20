@@ -13,7 +13,7 @@ This module offers similar functionality to the [web-push](https://www.npmjs.com
 
 ## How do I use it?
 
-```
+```js
 import {
 	ApplicationServerKeys,
 	generatePushHTTPRequest,
@@ -26,26 +26,26 @@ import {
 const keys = await ApplicationServerKeys.generate();
 
 const { headers, body, endpoint } = await generatePushHTTPRequest({
-    applicationServerKeys: keys,
-    payload: "TEST MESSAGE",
-    target: {
-        endpoint: "https://push-endpoint-origin/…",
-        keys: {
-            p256dh: "…",
-            auth: "…"
-        },
-    },
-    adminContact: "hello@example.com",
-    ttl: 60,
-    urgency: "low"
+	applicationServerKeys: keys,
+	payload: "TEST MESSAGE",
+	target: {
+		endpoint: "https://push-endpoint-origin/…",
+		keys: {
+			p256dh: "…",
+			auth: "…",
+		},
+	},
+	adminContact: "hello@example.com",
+	ttl: 60,
+	urgency: "low",
 });
 
 // bring your own fetch implementation if required
 
 await fetch(endpoint, {
-    method: "POST",
-    headers,
-    body
+	method: "POST",
+	headers,
+	body,
 });
 ```
 
@@ -53,9 +53,9 @@ await fetch(endpoint, {
 
 By default the module will use the `crypto` variable in the global scope to access the WebCrypto API. Some platforms (e.g. Node) do not provide that global variable, so as an alternative you can use `setWebCrypto` before using any of the other functions:
 
-```
-import { setWebCrypto } from 'webpush-webcrypto';
-import nodeCryptoModule from 'crypto';
+```js
+import { setWebCrypto } from "webpush-webcrypto";
+import nodeCryptoModule from "crypto";
 
 setWebCrypto(nodeCryptoModule.webcrypto);
 ```
