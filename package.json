@@ -1,7 +1,7 @@
 {
 	"name": "webpush-webcrypto",
 	"description": "A JS module for sending Web Push notifications, works in both browser and server environments",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"main": "lib/webpush.js",
 	"license": "MIT",
 	"type": "module",
