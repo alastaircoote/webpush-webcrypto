@@ -26,7 +26,7 @@ export class SubscriptionCoordinator {
 				namedCurve: "P-256",
 			},
 			false,
-			["deriveKey"]
+			[]
 		);
 		const auth = crypto.getRandomValues(new Uint8Array(16));
 
