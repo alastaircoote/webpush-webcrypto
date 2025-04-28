@@ -12,11 +12,14 @@
 		"chai": "^4.3.4",
 		"jsonwebtoken": "^8.5.1",
 		"mocha": "^9.1.3",
-		"static-server": "^2.2.1"
+		"static-server": "^2.2.1",
+		"typescript": "^5.8.3"
 	},
 	"scripts": {
 		"example": "static-server --follow-symlink example",
-		"test": "mocha --parallel test/**"
+		"test": "mocha --parallel test/**",
+		"build": "tsc",
+		"prepublish": "npm run build"
 	},
 	"repository": {
 		"url": "https://github.com/alastaircoote/webpush-webcrypto.git",
